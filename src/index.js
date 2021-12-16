@@ -1,11 +1,11 @@
 import photoCard from './templates/photo-card.hbs'
-import './css/styles.css';
+import './sass/main.scss';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
-import NewsApiService from './news-api-service.js'; 
+import NewsApiService from './js/news-api-service.js'; 
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-import LoadMoreBtn from './load-more.js';
+import LoadMoreBtn from './js/load-more.js';
 
 const refs = {
     searchForm: document.getElementById('search-form'),
