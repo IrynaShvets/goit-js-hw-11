@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 11</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    
+  </head>
+  <body>
+    
+        <form class="search-form" id="search-form">
+          <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+          <button type="submit">Search</button>
+        </form>
+    <div class="gallery">
+      <!-- Карточки изображений -->
+    </div>
+
+    <div class="load-btn">
+      <button 
+              type="button" 
+              class="btn button" 
+              data-action="load-more">
+              <span 
+                  class="spinner is-hidden"
+                  role="status"
+                  aria-hidden="true">
+              </span>
+              <span class="label">Load more</span>
+      </button>
+    </div>
+    
+    <script src="./index.js"></script>
+  </body>
+</html>
