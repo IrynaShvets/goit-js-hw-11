@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IrynaShvets/goit-js-hw-10.git"
+    "url": "git+https://github.com/IrynaShvets/goit-js-hw-11.git"
   },
   "keywords": [],
   "author": "Iryna Shvets <irinashwets@ukr.net>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IrynaShvets/goit-js-hw-10/issues"
+    "url": "https://github.com/IrynaShvets/goit-js-hw-11/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
