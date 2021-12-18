@@ -11,18 +11,19 @@ export default class  NewsApiService {
     }
 
     async fetchPhotoCards() {
+       
         const url = `${BASE_URL}?key=${API_KEY}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=${this.per_page}`;
         
         try {
             const response = await axios.get(url);
             const data = response.data; 
             this.incrementPage();
-            console.log(data); 
             return data;
               
         } catch (error) {
             console.log(error);
         } 
+        
     }
 
     incrementPage() {

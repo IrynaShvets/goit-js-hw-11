@@ -28,7 +28,8 @@ loadMoreBtn.refs.button.addEventListener('click', onLoadMore);
 function onSearchForm(e) {
     e.preventDefault();
     newsApiService.query = refs.searchQueryInput.value.trim();
-
+    newsApiService.resetPage();
+    console.log(newsApiService.page)
     if (newsApiService === '') {
         e.currentTarget.reset();
         onFetchError();
@@ -37,8 +38,7 @@ function onSearchForm(e) {
     }
     
     newsApiService.fetchPhotoCards().then(photos => {
-        console.log(photos); 
-         
+        
         if (photos.hits.length === 0) {
         onFetchError();
         loadMoreBtn.hide(); 
@@ -46,13 +46,12 @@ function onSearchForm(e) {
         } else if (photos.hits.length >= 40) {
             loadMoreBtn.show();
             clearPhotosContainer();
-            appendPhotosMarkup(photos);
+            appendPhotosMarkup(photos); 
             
             Notify.success(`Hooray! We found ${photos.totalHits} images.`);
         }
+        console.log(photos); 
     })
-    
-    newsApiService.resetPage(); 
     
     e.currentTarget.reset();
     scroll();
